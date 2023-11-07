@@ -1,0 +1,462 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+}
+
+
+header div.logo img {                                   /* Estilo para el logo */
+    width: 50%;
+}
+
+
+header .form .input {                                   /* Estilo para la barra de búsqueda */
+    width: 50%;
+}
+
+
+div.top-header{                                         /*buscador*/
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+header div.top-header p{                                /*Comprá en cuotas y sin tarjeta de crédito*/
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+header{                                                 /*Color del Header*/
+    background-color: #EAC926;
+}
+
+header div.logo,                                        /*Logo*/
+header .form{
+    width: 50%;
+}
+
+header div.logo{
+    padding: 10px;
+}
+header .form{                                           /*Estilos del Buscador*/                                 
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+}
+
+header nav{                                             /*Estilos del Navbar*/
+    font-size: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{                                         /*color de navbar*/
+    text-decoration: none;
+    color: #000;
+}
+
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+header .form .submit{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 10%;
+}
+
+div.burger-menu{
+    text-align: center;
+}
+
+div.burger-menu i{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+
+div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+
+
+@media (max-width: 361px){
+    .desktop-menu {
+        display: none; /* Ocultar el menú de escritorio y tablet en la versión móvil */
+    }
+    .main-article .description {
+        display: none
+}
+}
+
+
+@media (min-width: 361px){
+    main section article .description{
+        display: none;
+    }
+
+    main section article {
+        /* Estilos predeterminados del producto sin sombreado */
+        transition: box-shadow 0.3s ease; /* Agrega una transición suave para el sombreado */
+
+        /* Establece la sombra predeterminada */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra transparente por defecto */
+
+        /* Cuando el mouse pasa sobre el producto, se aplica el sombreado */
+        &:hover {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
+    }
+}
+
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+    nav {
+        display: block;
+    }
+
+    /* Ocultar la imagen del menú hamburguesa en la versión de escritorio y tablet */
+    .burger-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+        
+    }
+
+}
+
+.description {                                  /* Ocultar la descripción en la versión de escritorio */
+    display: none;
+}
+
+
+@media (min-width: 769px) {                     /* Mostrar la descripción solo cuando el mouse pasa por encima en la versión de escritorio */
+    .main-article:hover .description {
+        display: block;
+    }
+}
+
+
+@media (min-width: 361px) and                   /* Mostrar la descripción en resoluciones entre 361 y 769 */
+(max-width: 769px) {
+    .main-article .description {
+        display: block;
+    }
+}
+
+.footer {                                       /*Centrar el texto del footer*/
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {                               /*Centrar el footer*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.footer-section {                               /*Orden los elementos del footer uno al lado del otro*/
+    width: 30%;
+    margin-bottom: 40px;
+    transition: color 0.3s ease;
+}
+
+.footer-section i {                             /*Color de los iconos del footer*/
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3;
+}
+
+.footer-section i:hover {                       /*icono cambia de color al pasar el mouse*/
+    color: #5ebaf7;
+}
+
+.footer-bottom {                                /*Espacio inferior del footer*/
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {                     /*hace que los elementos del footer se orden uno al lado del otro*/
+    .footer-section {
+        width: 100%;                    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilos del formulario de registro */
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 115vh;
+}
+
+form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Estilos para los elementos de entrada y botones */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"],
+form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #1259c3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background-color: #4791ff;
+}
+
+/* Estilos para los checkboxes y etiquetas */
+.interests div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Espaciado entre los checkboxes */
+}
+
+.interests input[type="checkbox"] {
+    margin-right: 10px; /* Espaciado entre los checkboxes y las etiquetas */
+}
+
+/* Estilos para el perfil del usuario */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Añade un margen en la parte inferior del elemento .profile */
+}
+
+/* Añade un margen derecho a la etiqueta "Comprador" para crear espacio entre las opciones */
+.profile input[type="radio"][value="buy"] + label {
+    margin-right: 50px; /* Ajusta el valor del margen según tus preferencias */
+}
+
+
+/* Menu de Login*/
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh; /* Esto asegura que el formulario se centre verticalmente en la página */
+}
+
+form {
+    text-align: center;
+    width: 80%;
+    max-width: 300px; /* Puedes ajustar el ancho máximo según tus preferencias */
+}
+
+
+
+nav {                                               /*Espacio entre los navbar*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.desktop-menu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.desktop-menu li {
+    margin-right: 20px;
+}
+
+.desktop-menu li:last-child {
+    margin-right: 0;
+}
+
+main article .fas{
+    transition: transform 0.3s ease;
+}
+
+main article .fas:hover{
+    transform: rotate(-90deg);    
+}
+
+
+
+
+
+
+@media (min-width: 769px) {
+    div.top-header {
+        flex-wrap: nowrap;
+    }
+}
+
+
+
+
+
+
+
+
+
+
